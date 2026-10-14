@@ -1073,3 +1073,122 @@ footer p {
         padding: 24px;
     }
 }
+```css
+/* ===== DIPLOMES ET FORMATIONS ===== */
+
+.diplomes,
+.certifications {
+    padding: 80px 8%;
+}
+
+.diplomes h2,
+.certifications h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+    line-height: 1.8;
+    color: #b8b8c8;
+}
+
+.diplomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.diplome-card,
+.certification-card {
+    background: #11111b;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.diplome-card:hover,
+.certification-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.diplome-date {
+    color: #a78bfa;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.diplome-card h3,
+.certification-card h3 {
+    margin: 15px 0 10px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.diplome-specialite {
+    color: #c4b5fd;
+    font-weight: 600;
+}
+
+.diplome-etablissement,
+.diplome-card p,
+.certification-card p {
+    color: #b8b8c8;
+    line-height: 1.8;
+}
+
+.diplome-statut,
+.certification-statut {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.diplome-statut.obtenu {
+    background: rgba(34, 197, 94, 0.12);
+    color: #86efac;
+}
+
+.diplome-statut.en-cours,
+.certification-statut {
+    background: rgba(139, 92, 246, 0.15);
+    color: #c4b5fd;
+}
+
+.certification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certification-icon {
+    color: #a78bfa;
+    font-size: 2rem;
+}
+
+.certification-info {
+    flex: 1;
+}
+
+/* Adaptation aux petits écrans */
+
+@media (max-width: 600px) {
+    .diplomes,
+    .certifications {
+        padding: 60px 6%;
+    }
+
+    .certification-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
